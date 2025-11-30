@@ -7,8 +7,7 @@ import ENV from "./config/env.js"
 import connectDB from "./config/db.js";
 // routes
 import paymentRoutes from "./routes/payment.routes.js";
-
-// console.log(ENV);
+import userRoutes from "./routes/user.routes.js";
 
 // create app
 const app = express();
@@ -22,6 +21,7 @@ app.use(morgan("dev"));
 
 // routes
 app.use('/api', paymentRoutes);
+app.use('/api/user', userRoutes);
 
 // connect to db and listen to ports
 connectDB().then(() => {
