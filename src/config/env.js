@@ -11,6 +11,7 @@ const ENV = {
   CALLBACK_URL: isProd
   ? `${process.env.BACKEND_URL}/api/payment/verify-payment`
   : "http://localhost:5050/api/payment/verify-payment",
+  JWT_SECRET: process.env.JWT_SECRET,
 }
 
 export default ENV;
