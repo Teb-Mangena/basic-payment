@@ -8,9 +8,6 @@ import { paystackInstance } from "../lib/Paystack.js";
 export const initPayment = async (req,res) => {
   const { email, amount,subaccount_code } = req.body; 
 
-  console.log(req.body);
-
-
   try {
     const response = await paystackInstance.post('/transaction/initialize',{ 
       email, 
