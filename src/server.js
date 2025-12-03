@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // routes
-app.use('/api', paymentRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api', paymentRoutes);
 
 // connect to db and listen to ports
 connectDB().then(() => {

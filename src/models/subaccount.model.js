@@ -27,6 +27,12 @@ const subaccountSchema = new Schema({
   description: {
     type: String
   },
+  artistId: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    ref: "User",
+    unique: true
+  }
 },{timestamps:true});
 
 const Subaccount = mongoose.model('Subaccount', subaccountSchema);
